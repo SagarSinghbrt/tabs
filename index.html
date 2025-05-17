@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tabs</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- Tabs -->
+		<div class="main">
+			<div class="tabs">
+				<div class="tablink" onclick="openEvent(event, 'home')">
+					Home
+				</div>
+				<div class="tablink" onclick="openEvent(event, 'about')">
+					About
+				</div>
+				<div class="tablink" onclick="openEvent(event, 'contact')">
+					Contact
+				</div>
+				<div class="tablink" onclick="openEvent(event, 'blogs')">
+					Blogs
+				</div>
+			</div>
+
+			<div class="contentBx">
+				<div id="home" class="content">
+					<h2>Home</h2>
+					<p>
+						Discover a world of [products/services/community]
+						designed to [specific benefit or purpose]. Whether
+						you're here to [main action or feature], find
+						inspiration, or connect with [target audience], we’ve
+						got you covered. Explore, engage, and experience [your
+						unique value]. Your journey starts here!
+					</p>
+				</div>
+
+				<div id="about" class="content">
+					<h2>About</h2>
+					<p>
+						At [Your Website Name], we are passionate about
+						empowering individuals and teams to achieve their goals
+						through creativity, innovation, and knowledge. Founded
+						with a vision to provide reliable resources and
+						actionable insights, our platform has become a hub for
+						learners, creators, and innovators worldwide
+					</p>
+				</div>
+
+				<div id="contact" class="content">
+					<h2>Contact</h2>
+					<p>
+						We’d Love to Hear From You! Whether you have questions,
+						feedback, or collaboration ideas, we’re here to connect.
+						Reach out to us through the form below or use the
+						provided contact details.
+					</p>
+				</div>
+
+				<div id="blogs" class="content">
+					<h2>Blogs</h2>
+					<p>
+						Explore, Learn, and Be Inspired Welcome to our blog
+						section, where ideas come to life! Dive into a variety
+						of topics, from expert insights and how-to guides to the
+						latest trends and creative inspiration
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			// var tablinks = document.querySelectorAll(".tablink");
+			// var contents = document.querySelectorAll(".content");
+
+			// tablinks.forEach((tab, index) => {
+			// 	tab.addEventListener("click", function () {
+			// 		tablinks.forEach((tbs) => {
+			// 			tbs.classList.remove("active");
+			// 		});
+			// 		tab.classList.add("active");
+
+			// 		contents.forEach((content) => {
+			// 			content.classList.remove("active");
+			// 		});
+			// 		contents[index].classList.add("active");
+			// 	});
+			// });
+
+			// var tablinks = document.querySelectorAll(".tablink");
+			// var contents = document.querySelectorAll(".content");
+
+			// for (let i = 0; i < tablinks.length; i++) {
+			// 	tablinks[i].addEventListener("click", function () {
+			// 		for (let j = 0; j < tablinks.length; j++) {
+			// 			tablinks[j].classList.remove("active");
+			// 			contents[j].classList.remove("active");
+			// 		}
+			// 		this.classList.add("active");
+			// 		contents[i].classList.add("active");
+			// 	});
+			// }
+
+			function openEvent(eve, name) {
+				var tablinks = document.querySelectorAll(".tablink");
+				var contents = document.querySelectorAll(".content");
+
+				for (var i = 0; i < tablinks.length; i++) {
+					tablinks[i].classList.remove("active");
+					contents[i].classList.remove("active");
+				}
+
+				var name = document.getElementById(name);
+				name.classList.add("active");
+
+				eve.target.classList.add("active");
+			}
+		</script>
+	</body>
+</html>
